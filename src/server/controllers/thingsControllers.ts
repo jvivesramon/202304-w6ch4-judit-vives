@@ -8,12 +8,27 @@ export const getThings = (_req: Request, res: Response) => {
 export const getOneThing = (req: Request, res: Response) => {
   const { id } = req.params;
 
-  const thingIwant = things.findIndex((thing) => thing.id === id);
+  const thingPosition = things.findIndex((thing) => thing.id === id);
 
-  if (thingIwant === -1) {
+  if (thingPosition === -1) {
     res.status(404).json({ message: "No thing found" });
     return;
   }
 
-  res.status(200).json({ things: things[thingIwant].name });
+  res.status(200).json({ things: things[thingPosition].name });
+};
+
+export const deleteThing = (req: Request, res: Response) => {
+  const { id } = req.params;
+
+  const thingPosition = things.findIndex((thing) => thing.id === id);
+
+  if (thingPosition === -1) {
+    res.status(404).json({ message: "No thing found" });
+    return;
+  }
+
+  things.splice(thingPosition, 1);
+
+  res.status(200).json({ message: "Thing deleted" });
 };
