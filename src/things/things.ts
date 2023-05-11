@@ -1,4 +1,4 @@
-import { type ThingDataStructure } from "./types";
+import { type ThingDataStructure } from "./types.js";
 
 const things: ThingDataStructure[] = [
   {
