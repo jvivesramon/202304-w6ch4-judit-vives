@@ -34,6 +34,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
+    "crypto": "^1.0.1",
     "express": "^4.18.2",
     "morgan": "^1.10.0"
   }
