@@ -10,7 +10,7 @@
       "files": ["*.ts", "*.tsx"],
       "rules": {
         "no-unused-vars": "error",
-        "no-unsafe-call": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
         "@typescript-eslint/consistent-type-definitions": ["error", "interface"]
       }
     }
